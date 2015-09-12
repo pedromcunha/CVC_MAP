@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name frontendApp
+ * @name cvcApp
  * @description
- * # frontendApp
+ * # cvcApp
  *
  * Main module of the application.
  */
     angular
-    .module('frontendApp', [
+    .module('cvcApp', [
         'ngTouch',
         'ngMaterial'
     ])

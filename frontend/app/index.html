@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="frontendApp">
+  <body ng-app="cvcApp">
     <!--[if lte IE 8]>
     <![endif]-->
 
@@ -26,13 +26,11 @@
         </div>
     </md-toolbar>
     <div class="container" layout="row" layout-align="center center">
-    <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+        <div ng-include="'views/map_landing.html'" ng-controller="MainCtrl"></div>
     </div>
 
-    <div class="footer">
-      <div class="container">
+    <div class="footer" layout="row" layout-align="center center">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
     </div>
 
 
@@ -60,6 +58,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/directives/cvcmap.js"></script>
         <!-- endbuild -->
 </body>
 </html>
