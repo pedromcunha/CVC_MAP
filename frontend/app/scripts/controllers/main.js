@@ -8,10 +8,9 @@
  * Controller of the cvcApp
  */
 angular.module('cvcApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', function ($stateParams) {
+        console.log($stateParams);
+
+        //pop open the modal
+
+    });

@@ -18,8 +18,8 @@
     .config(function ($mdThemingProvider, $stateProvider, $urlRouterProvider) {
         //Theme Configuration
         $mdThemingProvider.theme('default')
-            .primaryPalette('purple')
-            .accentPalette('pink');
+            .primaryPalette('deep-purple')
+            .accentPalette('indigo');
 
 
         //ui router config
@@ -28,7 +28,7 @@
         //states
         $stateProvider
             .state('main', {
-                url: "/",
+                url: "/:storyId",
                 templateUrl: "views/map_landing.html",
                 controller: 'MainCtrl'
             });

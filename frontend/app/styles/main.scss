@@ -1,29 +1,45 @@
 // bower:scss
 // endbower
+html {
+    font-family: 'Open Sans', sans-serif;
+}
 
 body {
   padding: 0;
 }
 
 
+.header {
+    margin: 0 40px;
+
+    h2 {
+        margin: 0;
+    }
+}
+
 //containers and wrappers
 .container {
     margin: 0 auto;
     text-align: center;
     min-height: 82%;
+    margin-top: 91px;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
 }
 
 #map {
     width: 100vw;
-    height: 89vh;
+    height: 82vh;
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 20px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-  height: 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000000;
 }
 
 /* Responsive: Portrait tablets and up */

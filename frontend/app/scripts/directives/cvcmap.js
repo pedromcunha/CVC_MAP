@@ -7,16 +7,16 @@
  * # cvcMap
  */
 angular.module('cvcApp')
-  .directive('cvcMap', function ($timeout, utils, user) {
+  .directive('cvcMap', function ($timeout, utils, story) {
     return {
         template: '<div id="map" layout-fill></div>',
         restrict: 'E',
         replace: true,
         link: function () {
             $timeout(function() {
-              window.cartodb.createVis('map', 'https://pedrocunha.cartodb.com/api/v2/viz/a4a0406e-5962-11e5-b251-0e49835281d6/viz.json')
-              .done(function(vis, layers) {
-                    utils.getZipCode().then(function() {
+              window.cartodb.createVis('map', 'https://pedrocunha.cartodb.com/api/v2/viz/0b6e4576-59a8-11e5-8218-0e6e1df11cbf/viz.json')
+                .done(function(vis, layers) {
+                    story.userLocation = utils.getZipCode().then(function() {
                         visualizeMap(vis, layers);
                     });
                 });
@@ -34,8 +34,8 @@ angular.module('cvcApp')
                 var map = vis.getNativeMap();
 
                 // now, perform any operations you need, e.g. assuming map is a L.Map object:
-                if(user.location.loc) {
-                    map.setView(user.location.loc.split(','));
+                if(story.userLocation.location.loc) {
+                    map.setView(story.userLocation.location.loc.split(','));
                 }
             }
         }

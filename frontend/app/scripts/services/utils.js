@@ -8,14 +8,14 @@
  * Service in the cvcApp.
  */
 angular.module('cvcApp')
-    .service('utils', function ($http, user) {
+    .service('utils', function ($http) {
         var utils = {};
 
         utils.getZipCode = function() {
             return $http.get("http://ipinfo.io")
                 .then(function(response) {
                     if(response && response.data) {
-                        user.location = response.data;
+                        return response.data;
                     }
                 });
         };
