@@ -10,8 +10,9 @@ angular.module('cvcApp')
   .directive('cvcMap', function () {
     return {
       template: '<div class="cvc-map">MAP</div>',
-      restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-      }
+      restrict: 'E'
+    //   ,
+    //   link: function postLink(scope, element, attrs) {
+    //   }
     };
   });
