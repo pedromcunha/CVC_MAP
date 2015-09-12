@@ -14,6 +14,8 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
   </head>
   <body ng-app="cvcApp">
     <!--[if lte IE 8]>
@@ -25,15 +27,7 @@
             CVC Map
         </div>
     </md-toolbar>
-    <div class="container" layout="row" layout-align="center center">
-        <div ng-include="'views/map_landing.html'" ng-controller="MainCtrl"></div>
-    </div>
-
-    <div class="footer" layout="row" layout-align="center center">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-    </div>
-
-
+    <div ui-view class="container"></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -44,7 +38,6 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>

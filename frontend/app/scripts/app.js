@@ -11,25 +11,27 @@
     angular
     .module('cvcApp', [
         'ngTouch',
+        'ui.router',
         'ngMaterial'
     ])
 
-    //Theme Configuration
-    .config(function ($mdThemingProvider) {
-        //create color palletes
-        // var okraGreen = $mdThemingProvider.extendPalette('green', {
-        //     '500': '#99b742',
-        // });
-        // var okraGreenAccent = $mdThemingProvider.extendPalette('green', {
-        //     'A200': '#99b742'
-        // });
-
-        //define color extensions
-        // $mdThemingProvider.definePalette('okraGreen', okraGreen);
-        // $mdThemingProvider.definePalette('okraGreenAccent', okraGreenAccent);
-
-        //register extensions to the theme
+    .config(function ($mdThemingProvider, $stateProvider, $urlRouterProvider) {
+        //Theme Configuration
         $mdThemingProvider.theme('default')
-            .primaryPalette('pink')
-            .accentPalette('purple');
-    });
+            .primaryPalette('purple')
+            .accentPalette('pink');
+
+
+        //ui router config
+        $urlRouterProvider.otherwise("/");
+
+        //states
+        $stateProvider
+            .state('main', {
+                url: "/",
+                templateUrl: "views/map_landing.html",
+                controller: 'MainCtrl'
+            });
+    })
+
+;
