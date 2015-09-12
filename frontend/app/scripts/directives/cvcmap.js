@@ -28,8 +28,8 @@ angular.module('cvcApp')
                   var map = vis.getNativeMap();
 
                   // now, perform any operations you need, e.g. assuming map is a L.Map object:
-                  // map.setZoom(3);
-                  // map.panTo([50.5, 30.5]);
+                  map.setZoom(3);
+                  map.panTo([50.5, 30.5]);
                 });
           });
       }
