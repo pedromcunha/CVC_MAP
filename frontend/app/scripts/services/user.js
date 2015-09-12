@@ -8,6 +8,24 @@
  * Service in the cvcApp.
  */
 angular.module('cvcApp')
-  .service('user', function () {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-  });
+    .factory('user', function () {
+        var user = {};
+
+        user.get = function() {
+
+        };
+
+        user.delete = function() {
+
+        };
+
+        user.register = function() {
+
+        };
+
+        user.doSurvey = function() {
+
+        };
+
+        return user;
+    });
