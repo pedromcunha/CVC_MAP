@@ -8,10 +8,11 @@
  * Controller of the cvcApp
  */
 angular.module('cvcApp')
-    .controller('storyModalCtrl', function (story, $scope) {
-        console.log(story.currentStory);
+    .controller('storyModalCtrl', function (story, $scope, $mdDialog) {
         $scope.modal = {};
 
         $scope.modal.story = story.currentStory;
-        console.log($scope);
+        $scope.close = function () {
+            $mdDialog.hide();
+        };
     });
