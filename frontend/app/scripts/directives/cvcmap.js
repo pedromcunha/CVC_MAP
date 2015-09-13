@@ -9,12 +9,12 @@
 angular.module('cvcApp')
   .directive('cvcMap', function ($timeout, utils, story) {
     return {
-        template: '<div id="map" layout-fill></div>',
+        template: '<div id="map" layout-fill><button ng-click="openLeftMenu()" class="filter-button"><md-tooltip md-direction="top"> Filters </md-tooltip><i class="fa fa-filter"></i></button></div>',
         restrict: 'E',
         replace: true,
         link: function () {
             $timeout(function() {
-              window.cartodb.createVis('map', 'https://pedrocunha.cartodb.com/api/v2/viz/0b6e4576-59a8-11e5-8218-0e6e1df11cbf/viz.json')
+              window.cartodb.createVis('map', 'https://pedrocunha.cartodb.com/api/v2/viz/22495492-59bd-11e5-8d60-0e73ffd62169/viz.json')
                 .done(function(vis, layers) {
                     utils.getZipCode().then(function(response) {
                         story.userLocation = response;
@@ -41,4 +41,4 @@ angular.module('cvcApp')
             }
         }
     };
-  });
+});
