@@ -2,11 +2,11 @@
     <div layout="column">
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2>{{modal.story.title}}</h2>
+                <h2>{{modal.story.currentStory.title}}</h2>
                 <span flex></span>
                 <!-- AddToAny BEGIN -->
                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="margin-bottom: 7px;" layout-align="start center" layout="row">
-                    <a class="a2a_dd" ng-href="{{::modal.story.story_id}}" style="display: none;"></a>
+                    <a class="a2a_dd" ng-href="{{::modal.story.currentStory.story_id}}" style="display: none;"></a>
                     <a class="a2a_button_facebook"></a>
                     <a class="a2a_button_twitter"></a>
                     <a class="a2a_button_google_plus"></a>
@@ -18,7 +18,7 @@
                 </md-button>
             </div>
         </md-toolbar>
-        <img class="story-photo" ng-src="{{::modal.story.photo}}">
+        <img class="story-photo" ng-src="{{::modal.story.currentStory.url}}">
     </div>
     <div class="story-bio" layout-align="start start" layout="column">
         <p>Hispanic, Diagnosed at 44, Mother of 2</p>
@@ -26,11 +26,11 @@
     </div>
     <md-dialog-content>
         <h4>How I found out I had breast cancer</h4>
-        <p>{{::modal.story.section_1}}</p>
+        <p>{{::modal.story.currentStory.section_1}}</p>
         <h4>How breast cancer affected my life</h4>
-        <p>{{::modal.story.section_2}}</p>
+        <p>{{::modal.story.currentStory.section_2}}</p>
         <h4>I didn’t self-check because...</h4>
-        <p>{{::modal.story.section_3}}</p>
+        <p>{{::modal.story.currentStory.section_3}}</p>
         <div layout="row" layout-align="end end">
             <md-button class="md-raised" ng-click="modal.more()">More Stories</md-button>
             <md-button class="md-accent md-raised">Start Self Check</md-button>

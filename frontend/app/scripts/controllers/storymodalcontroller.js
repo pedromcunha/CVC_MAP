@@ -10,7 +10,7 @@
 angular.module('cvcApp')
     .controller('storyModalCtrl', function (story, $scope, $mdDialog, $mdSidenav) {
         $scope.modal = {};
-        $scope.modal.story = story.currentStory;
+        $scope.modal.story = story;
         $scope.close = function () {
             $mdDialog.hide();
         };
