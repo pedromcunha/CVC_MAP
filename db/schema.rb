@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150913134632) do
+ActiveRecord::Schema.define(version: 20150913163942) do
 
   create_table "sources", force: :cascade do |t|
     t.string   "age"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150913134632) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "source_id"
+    t.string   "url"
   end
 
 end
