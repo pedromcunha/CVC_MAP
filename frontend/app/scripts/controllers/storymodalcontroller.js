@@ -2,16 +2,12 @@
 
 /**
  * @ngdoc function
- * @name cvcApp.controller:StorymodalcontrollerCtrl
+ * @name cvcApp.controller:storyModalCtrl
  * @description
- * # StorymodalcontrollerCtrl
+ * # storyModalCtrl
  * Controller of the cvcApp
  */
 angular.module('cvcApp')
-  .controller('StorymodalcontrollerCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('storyModalCtrl', function () {
+        console.log("Im a modal!!");
+    });
