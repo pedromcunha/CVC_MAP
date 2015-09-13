@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+story_list = [
+  [ "Ithought I was too young 1", "something", "something", "something" ],
+  [ "Ithought I was too  2", "something", "something", "something" ],
+  [ "Ithought I was 3", "something", "something", "something" ],
+  [ "Ithought I  4", "something", "something", "something" ],
+  [ "Ithought I was too young 5", "something", "something", "something" ], 
+  [ "Ithought I was too young 6", "something", "something", "something" ], 
+  [ "Ithought I was too young 6", "something", "something", "something" ]
+]
+
+story_list.each do |title, sec_1, sec_2, sec_3|
+  Story.create( title: title, section_1:  sec_1 , section_2: sec_2 , section_3: sec_3)
+end
