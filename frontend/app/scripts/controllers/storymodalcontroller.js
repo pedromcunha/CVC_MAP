@@ -8,6 +8,10 @@
  * Controller of the cvcApp
  */
 angular.module('cvcApp')
-    .controller('storyModalCtrl', function () {
-        console.log("Im a modal!!");
+    .controller('storyModalCtrl', function (story, $scope) {
+        console.log(story.currentStory);
+        $scope.modal = {};
+
+        $scope.modal.story = story.currentStory;
+        console.log($scope);
     });

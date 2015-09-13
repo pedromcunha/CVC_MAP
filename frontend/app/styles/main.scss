@@ -17,6 +17,12 @@ body {
     }
 }
 
+md-toolbar {
+    a {
+        color: #fff;
+    }
+}
+
 //containers and wrappers
 .cvc-container {
     margin: 0 auto;
@@ -49,6 +55,28 @@ md-backdrop.md-dialog-backdrop {
     md-dialog-content {
         max-width:800px;
         max-height:810px;
+    }
+
+    .story-photo {
+        width: 200px;
+        margin-top: -64px;
+        z-index: 100;
+    }
+
+    p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    h4 {
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-left: 200px;
+        max-width: 400px;
+        text-overflow: ellipsis;
     }
 }
 
