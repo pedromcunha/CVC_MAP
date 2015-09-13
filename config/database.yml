@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
+
+  username: cvc_model
   database: db/production.sqlite3
+  password: ENV["DATABASE_KEY"]

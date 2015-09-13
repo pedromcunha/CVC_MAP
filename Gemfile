@@ -14,6 +14,12 @@ gem 'active_model_serializers'
 
 gem 'pry'
 
+group :production do
+  gem 'pg'
+  gem "activerecord-postgresql-adapter"
+  gem 'figaro'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
