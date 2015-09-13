@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150912231237) do
+ActiveRecord::Schema.define(version: 20150913024542) do
 
   create_table "stories", force: :cascade do |t|
     t.string   "title"
     t.string   "section_1"
     t.string   "section_2"
     t.string   "section_3"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
 end

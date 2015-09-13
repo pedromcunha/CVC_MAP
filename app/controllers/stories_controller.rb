@@ -11,10 +11,10 @@ class StoriesController < ApplicationController
   end 
 
   def create
-    binding.pry
     @story = Story.new(story_params)
 
     if @story.save 
+      binding.pry
        render json: @story
 
     else
@@ -25,6 +25,6 @@ class StoriesController < ApplicationController
   private 
 
   def story_params 
-    params.permit(:title, :section_1, :section_2, :section_3)
+    params.permit(:title, :section_1, :section_2, :section_3, :photo_file_name)
   end 
 end
