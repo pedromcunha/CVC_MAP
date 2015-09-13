@@ -39,4 +39,8 @@ angular.module('cvcApp')
             $mdSidenav('left').toggle();
         };
 
+        $scope.showStory = function(id) {
+            story.dialog(id);
+        };
+
     });
