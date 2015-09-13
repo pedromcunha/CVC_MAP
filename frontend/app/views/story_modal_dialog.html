@@ -11,6 +11,10 @@
         </md-toolbar>
         <img class="story-photo" ng-src="{{::modal.story.photo}}">
     </div>
+    <div class="story-bio" layout-align="start start" layout="column">
+        <p>Hispanic, Diagnosed at 44, Mother of 2</p>
+        <p>New York, NY</p>
+    </div>
     <md-dialog-content>
         <h4>How I found out I had breast cancer</h4>
         <p>{{::modal.story.section_1}}</p>
@@ -18,17 +22,17 @@
         <p>{{::modal.story.section_2}}</p>
         <h4>I didn’t self-check because...</h4>
         <p>{{::modal.story.section_3}}</p>
-
-    </md-dialog-content>
-        <div class="md-actions" layout="row">
+        <div flex layout="row" layout-align="end end">
             <!-- AddToAny BEGIN -->
-            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="margin-bottom: 7px;">
                 <a class="a2a_dd" ng-href="{{::modal.story.story_id}}" style="display: none;"></a>
                 <a class="a2a_button_facebook"></a>
                 <a class="a2a_button_twitter"></a>
                 <a class="a2a_button_google_plus"></a>
             </div>
             <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-      <!-- AddToAny END -->
-      </div>
+            <!-- AddToAny END -->
+            <md-button class="md-accent md-raised">More Stories</md-button>
+        </div>
+    </md-dialog-content>
 </md-dialog>
