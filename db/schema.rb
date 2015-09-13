@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150913024542) do
+ActiveRecord::Schema.define(version: 20150913172255) do
+
+  create_table "sources", force: :cascade do |t|
+    t.string   "age"
+    t.string   "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "stories", force: :cascade do |t|
     t.string   "title"
@@ -24,6 +31,13 @@ ActiveRecord::Schema.define(version: 20150913024542) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "source_id"
+    t.string   "url"
+    t.string   "age"
+    t.string   "race"
+    t.string   "city"
+    t.string   "state"
+    t.string   "noc"
   end
 
 end
