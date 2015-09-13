@@ -65,10 +65,14 @@ md-backdrop.md-dialog-backdrop {
 }
 
 .md-sidenav-backdrop {
-    z-index: 100000000;
+    z-index: 100000000 !important;
 }
 
 md-sidenav {
+    z-index: 100000000;
+}
+
+.md-select-menu-container {
     z-index: 100000000;
 }
 
@@ -111,6 +115,21 @@ md-sidenav {
     }
 }
 
+.input-group,
+ .input-group-column {
+    md-label {
+        margin-top: 20px;
+        margin-bottom: 26px;
+        vertical-align: bottom;
+        line-height: 30px;
+    }
+}
+
+.input-group-column {
+    md-label {
+        margin-bottom: 0;
+    }
+}
 /* Responsive: Portrait tablets and up */
 // @media screen and (min-width: 768px) {
 //   .container {

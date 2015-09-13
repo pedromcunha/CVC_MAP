@@ -8,7 +8,7 @@
  * Service in the cvcApp.
  */
 angular.module('cvcApp')
-    .factory('story', function ($mdDialog, $http) {
+    .factory('story', function ($mdDialog) {
         var story = {};
 
         story.get = function(storyId) {
@@ -16,9 +16,9 @@ angular.module('cvcApp')
             if(storyId) {
                 data.storyId = storyId;
             }
-            $http.get('https://fast-dawn-1609.herokuapp.com/stories', data).then(function(response) {
-                console.log(response);
-            });
+            // $http.get('https://fast-dawn-1609.herokuapp.com/stories', data).then(function(response) {
+            //     console.log(response);
+            // });
             console.log(storyId);
 
             return {

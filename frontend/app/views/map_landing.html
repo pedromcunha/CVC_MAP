@@ -1,7 +1,39 @@
-<div layout="row">
-  <md-sidenav md-component-id="left" class="md-sidenav-left">
-    Left Nav!
-  </md-sidenav>
+<div layout="row" id="filter-nav">
+    <md-sidenav md-component-id="left" class="md-sidenav-left">
+        <h3>Help us find breast cancer stories from people like you</h3>
+        <div layout="row" class="input-group">
+            <md-label flex="33">Race:</md-label>
+            <md-select flex="66" ng-model="filter.race">
+                <md-option>African American</md-option>
+                <md-option>White</md-option>
+                <md-option>Asian</md-option>
+            </md-select>
+        </div>
+        <div layout="row" class="input-group">
+            <md-label flex="33">Age:</md-label>
+            <md-select flex="66" ng-model="filter.age">
+                <md-option>African American</md-option>
+                <md-option>White</md-option>
+                <md-option>Asian</md-option>
+            </md-select>
+        </div>
+        <div layout="row" class="input-group">
+            <md-label flex="33">Children:</md-label>
+            <md-select flex="66" ng-model="filter.children">
+                <md-option>African American</md-option>
+                <md-option>White</md-option>
+                <md-option>Asian</md-option>
+            </md-select>
+        </div>
+        <div layout="column" class="input-group-column">
+            <md-label>What keeps you from self checking?</md-label>
+            <md-select ng-model="filter.children">
+                <md-option>African American</md-option>
+                <md-option>White</md-option>
+                <md-option>Asian</md-option>
+            </md-select>
+        </div>
+    </md-sidenav>
 </div>
  <cvc-map></cvc-map>
  <md-toolbar class="md-primary footer" layout="row" layout-align="center center">

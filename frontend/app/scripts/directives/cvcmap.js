@@ -7,7 +7,7 @@
  * # cvcMap
  */
 angular.module('cvcApp')
-  .directive('cvcMap', function ($timeout, utils, story) {
+  .directive('cvcMap', function ($timeout, utils, story, mapViz) {
     return {
         template: '<div id="map" layout-fill><button ng-click="openLeftMenu()" class="filter-button"><md-tooltip md-direction="top"> Filters </md-tooltip><i class="fa fa-filter"></i></button></div>',
         restrict: 'E',
@@ -33,6 +33,7 @@ angular.module('cvcApp')
 
                 // you can get the native map to work with it
                 var map = vis.getNativeMap();
+                mapViz.setMap(vis, layers);
 
                 // now, perform any operations you need, e.g. assuming map is a L.Map object:
                 if(story.userLocation.loc) {
