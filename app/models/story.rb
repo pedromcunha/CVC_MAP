@@ -1,4 +1,9 @@
 class Story < ActiveRecord::Base
-#https://fast-dawn-1609.herokuapp.com
+  has_attached_file :photo
+  #https://fast-dawn-1609.herokuapp.com
+
+
+  
+
   
 end
