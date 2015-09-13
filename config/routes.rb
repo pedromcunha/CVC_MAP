@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root to: 'stories#home'
-  resources :stories, only: [:index, :create]
+  resources :stories, only: [:show, :create]
 
 
 
