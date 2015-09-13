@@ -16,7 +16,7 @@
     <!-- endbuild -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body ng-app="cvcApp">
     <!--[if lte IE 8]>
@@ -29,7 +29,7 @@
             <span>Stories from breast cancer fighters near you</span>
         </div>
     </md-toolbar>
-    <div ui-view class="container"></div>
+    <div ui-view class="cvc-container"></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -42,6 +42,8 @@
     </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>

@@ -2,7 +2,6 @@
 // endbower
 html {
     font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
 }
 
 body {
@@ -19,16 +18,10 @@ body {
 }
 
 //containers and wrappers
-.container {
+.cvc-container {
     margin: 0 auto;
     text-align: center;
     min-height: 82%;
-    margin-top: 91px;
-}
-
-.header-container {
-    position: fixed;
-    top: 0;
 }
 
 #map {
@@ -41,6 +34,22 @@ body {
     position: fixed;
     bottom: 0;
     z-index: 10000000;
+}
+
+//dialogs
+.md-dialog-container {
+    z-index: 10000000000000;
+}
+
+md-backdrop.md-dialog-backdrop {
+    z-index: 1000000000;
+}
+
+.story-modal {
+    md-dialog-content {
+        max-width:800px;
+        max-height:810px;
+    }
 }
 
 /* Responsive: Portrait tablets and up */
