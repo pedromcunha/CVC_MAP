@@ -1,0 +1,51 @@
+// bower:scss
+// endbower
+html {
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+body {
+  padding: 0;
+}
+
+
+.header {
+    margin: 0 40px;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+//containers and wrappers
+.container {
+    margin: 0 auto;
+    text-align: center;
+    min-height: 82%;
+    margin-top: 91px;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+}
+
+#map {
+    width: 100vw;
+    height: 82vh;
+}
+
+/* Custom page footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 10000000;
+}
+
+/* Responsive: Portrait tablets and up */
+// @media screen and (min-width: 768px) {
+//   .container {
+//     max-width: 730px;
+//   }
+// }
