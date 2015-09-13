@@ -10,19 +10,26 @@
 angular.module('cvcApp')
   .factory('mapViz', function () {
     //prive methods or variables
-    var map, _layers;
+    var map, _subLayers = [];
 
     // Public API here
     return {
-        setMap: function (viz, layers) {
+        setMap: function (viz, layer) {
             map = viz;
-            _layers = layers;
+            if(layer) {
+                _subLayers.push(layer);
+            }
         },
         getMap: function() {
             return map;
         },
-        makeSqlQuey: function() {
-
+        getLayers: function() {
+            console.log(_subLayers);
+            return _subLayers;
+        },
+        makeSqlQuey: function(query) {
+            _subLayers[0].setSQL(query);
+            return true;
         },
         toggleLayer: function() {
 

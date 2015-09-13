@@ -11,6 +11,7 @@ body {
 
 .header {
     margin: 0 40px;
+    color: #fff;
 
     h2 {
         margin: 0;
@@ -20,6 +21,12 @@ body {
 md-toolbar {
     a {
         color: #fff;
+    }
+}
+
+.header-container {
+    div:last-child {
+        margin-top: -45px;
     }
 }
 
@@ -72,6 +79,12 @@ md-sidenav {
     z-index: 100000000;
 }
 
+#filter-nav {
+    h3 {
+        margin-top: 100px;
+    }
+}
+
 .md-select-menu-container {
     z-index: 100000000;
 }
@@ -115,21 +128,15 @@ md-sidenav {
     }
 }
 
-.input-group,
- .input-group-column {
+.input-group-column {
     md-label {
         margin-top: 20px;
-        margin-bottom: 26px;
+        margin-bottom: 0;
         vertical-align: bottom;
         line-height: 30px;
     }
 }
 
-.input-group-column {
-    md-label {
-        margin-bottom: 0;
-    }
-}
 /* Responsive: Portrait tablets and up */
 // @media screen and (min-width: 768px) {
 //   .container {

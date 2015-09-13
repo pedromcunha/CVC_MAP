@@ -19,7 +19,7 @@
         //Theme Configuration
         $mdThemingProvider.theme('default')
             .primaryPalette('deep-purple')
-            .accentPalette('indigo');
+            .accentPalette('purple');
 
 
         //ui router config

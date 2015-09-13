@@ -1,30 +1,29 @@
 <div layout="row" id="filter-nav">
     <md-sidenav md-component-id="left" class="md-sidenav-left">
         <h3>Help us find breast cancer stories from people like you</h3>
-        <div layout="row" class="input-group">
-            <md-label flex="33">Race:</md-label>
-            <md-select flex="66" ng-model="filter.race">
-                <md-option>African American</md-option>
-                <md-option>White</md-option>
-                <md-option>Asian</md-option>
-            </md-select>
-        </div>
-        <div layout="row" class="input-group">
-            <md-label flex="33">Age:</md-label>
-            <md-select flex="66" ng-model="filter.age">
-                <md-option>African American</md-option>
-                <md-option>White</md-option>
-                <md-option>Asian</md-option>
-            </md-select>
-        </div>
-        <div layout="row" class="input-group">
-            <md-label flex="33">Children:</md-label>
-            <md-select flex="66" ng-model="filter.children">
-                <md-option>African American</md-option>
-                <md-option>White</md-option>
-                <md-option>Asian</md-option>
-            </md-select>
-        </div>
+        <md-input-container>
+          <label>Race</label>
+          <md-select ng-model="filter.race" aria-label="Race">
+            <md-option ng-value="african_american">African American</md-option>
+            <md-option ng-value="asian">Asian</md-option>
+            <md-option ng-value="white">White</md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container>
+          <label>Age</label>
+          <md-select ng-model="filter.age" aria-label="Race">
+            <md-option ng-value="{{::age}}" ng-repeat="age in ages">{{::age}}</md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container>
+          <label>Children</label>
+          <md-select ng-model="filter.children" aria-label="Race">
+            <md-option ng-value="0">0</md-option>
+            <md-option ng-value="1">1</md-option>
+            <md-option ng-value="2">2</md-option>
+            <md-option ng-value="3">3+</md-option>
+          </md-select>
+        </md-input-container>
         <div layout="column" class="input-group-column">
             <md-label>What keeps you from self checking?</md-label>
             <md-select ng-model="filter.children">
@@ -33,6 +32,7 @@
                 <md-option>Asian</md-option>
             </md-select>
         </div>
+        <md-button class="md-raised md-primary" ng-click="addFilters()">Filter</md-button>
     </md-sidenav>
 </div>
  <cvc-map></cvc-map>
