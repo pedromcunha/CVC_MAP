@@ -1,7 +1,39 @@
-<div layout="row">
-  <md-sidenav md-component-id="left" class="md-sidenav-left">
-    Left Nav!
-  </md-sidenav>
+<div layout="row" id="filter-nav">
+    <md-sidenav md-component-id="left" class="md-sidenav-left">
+        <h3>Help us find breast cancer stories from people like you</h3>
+        <md-input-container>
+          <label>Race</label>
+          <md-select ng-model="filter.race" aria-label="Race">
+            <md-option ng-value="african_american">African American</md-option>
+            <md-option ng-value="asian">Asian</md-option>
+            <md-option ng-value="white">White</md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container>
+          <label>Age</label>
+          <md-select ng-model="filter.age" aria-label="Race">
+            <md-option ng-value="{{::age}}" ng-repeat="age in ages">{{::age}}</md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container>
+          <label>Children</label>
+          <md-select ng-model="filter.children" aria-label="Race">
+            <md-option ng-value="0">0</md-option>
+            <md-option ng-value="1">1</md-option>
+            <md-option ng-value="2">2</md-option>
+            <md-option ng-value="3">3+</md-option>
+          </md-select>
+        </md-input-container>
+        <div layout="column" class="input-group-column">
+            <md-label>What keeps you from self checking?</md-label>
+            <md-select ng-model="filter.children">
+                <md-option>African American</md-option>
+                <md-option>White</md-option>
+                <md-option>Asian</md-option>
+            </md-select>
+        </div>
+        <md-button class="md-raised md-primary" ng-click="addFilters()">Filter</md-button>
+    </md-sidenav>
 </div>
  <cvc-map></cvc-map>
  <md-toolbar class="md-primary footer" layout="row" layout-align="center center">

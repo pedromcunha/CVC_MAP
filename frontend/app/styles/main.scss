@@ -11,6 +11,7 @@ body {
 
 .header {
     margin: 0 40px;
+    color: #fff;
 
     h2 {
         margin: 0;
@@ -20,6 +21,12 @@ body {
 md-toolbar {
     a {
         color: #fff;
+    }
+}
+
+.header-container {
+    div:last-child {
+        margin-top: -45px;
     }
 }
 
@@ -65,10 +72,20 @@ md-backdrop.md-dialog-backdrop {
 }
 
 .md-sidenav-backdrop {
-    z-index: 100000000;
+    z-index: 100000000 !important;
 }
 
 md-sidenav {
+    z-index: 100000000;
+}
+
+#filter-nav {
+    h3 {
+        margin-top: 100px;
+    }
+}
+
+.md-select-menu-container {
     z-index: 100000000;
 }
 
@@ -108,6 +125,15 @@ md-sidenav {
         margin-left: 200px;
         max-width: 400px;
         text-overflow: ellipsis;
+    }
+}
+
+.input-group-column {
+    md-label {
+        margin-top: 20px;
+        margin-bottom: 0;
+        vertical-align: bottom;
+        line-height: 30px;
     }
 }
 

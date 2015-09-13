@@ -9,15 +9,30 @@
  */
 angular.module('cvcApp')
   .factory('mapViz', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
+    //prive methods or variables
+    var map, _subLayers = [];
 
     // Public API here
     return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
+        setMap: function (viz, layer) {
+            map = viz;
+            if(layer) {
+                _subLayers.push(layer);
+            }
+        },
+        getMap: function() {
+            return map;
+        },
+        getLayers: function() {
+            console.log(_subLayers);
+            return _subLayers;
+        },
+        makeSqlQuey: function(query) {
+            _subLayers[0].setSQL(query);
+            return true;
+        },
+        toggleLayer: function() {
+
+        }
     };
   });
