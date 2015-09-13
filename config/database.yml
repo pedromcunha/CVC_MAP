@@ -26,5 +26,5 @@ production:
   <<: *default
   adapter: postgresql
   username: cvc_model
-  database: db/production.sqlite3
+  database: cvc_model_production
   password: ENV["DATABASE_KEY"]

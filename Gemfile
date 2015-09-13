@@ -5,10 +5,10 @@ gem 'rails', '4.2.1'
 
 gem 'rails-api'
 
-gem 'spring', :group => :development
-
-
-gem 'sqlite3'
+group  :development, :test do 
+  gem 'spring'
+  gem 'sqlite3'
+end
 
 gem 'active_model_serializers'
 
