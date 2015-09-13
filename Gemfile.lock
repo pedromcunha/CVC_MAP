@@ -41,6 +41,11 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    aws-sdk (1.64.0)
+      aws-sdk-v1 (= 1.64.0)
+    aws-sdk-v1 (1.64.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     builder (3.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -127,6 +132,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   activerecord-postgresql-adapter
+  aws-sdk
   figaro
   paperclip (~> 4.3)
   pg

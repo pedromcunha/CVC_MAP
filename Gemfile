@@ -14,6 +14,7 @@ gem 'active_model_serializers'
 
 gem 'pry'
 gem "paperclip", "~> 4.3"
+gem "aws-sdk"
 
 group :production do
   gem 'pg'
