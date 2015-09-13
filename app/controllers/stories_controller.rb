@@ -1,5 +1,8 @@
 class StoriesController < ApplicationController
 
+  def home
+
+  end 
 
   def index
     @story = Story.where(id: Random.rand(11)).take
@@ -13,6 +16,7 @@ class StoriesController < ApplicationController
 
     if @story.save 
        render json: @story
+
     else
       render json: @story.errors, status: :unprocessable_entity
     end
